@@ -23,7 +23,7 @@ function CmcdNavBar() {
                 <DropdownToggle nav caret>
                 GAMES
                 </DropdownToggle>
-                <DropdownMenu right className="navbar-dark bg-dark text-light">
+                <DropdownMenu right className="navbar-dark">
                 <DropdownItem>
                     MADE IN THE SHADE
                 </DropdownItem>
