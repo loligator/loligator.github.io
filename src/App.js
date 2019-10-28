@@ -4,6 +4,7 @@ import './App.css';
 import CmcdNavBar from './Components/cmcdNavBar';
 
 function App() {
+  let images = [];
   return (
     <div className="App">
       <CmcdNavBar/>
@@ -12,6 +13,7 @@ function App() {
           CONNOR MCDERMOTT
         </h1>
       </header>
+      <Gallery images={images}/>
     </div>
   );
 }
