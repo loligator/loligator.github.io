@@ -37,3 +37,7 @@
 .App-link {
   color: #09d3ac;
 }
+
+.bg-dark .dropdown-menu .dropdown-item {
+  color: #fff !important;
+}
