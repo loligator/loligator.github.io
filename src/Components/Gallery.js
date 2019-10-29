@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+// Reference used: https://codepen.io/DZuz14/pen/XxKLVY?editors=0110
+// Not an exact copy, but close enough to give credit
+
 const Gallery = (props) => {
 
     // Hooks
