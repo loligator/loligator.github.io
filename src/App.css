@@ -41,3 +41,15 @@
 .bg-dark .dropdown-menu .dropdown-item {
   color: #fff !important;
 }
+
+.Gallery {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.Gallery-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}

@@ -2,9 +2,16 @@ import React from 'react';
 import './App.css';
 
 import CmcdNavBar from './Components/cmcdNavBar';
+import Gallery from './Components/Gallery';
+
+import imgDualProcessors from './Image/DualProcessors.png';
+import imgMadeInTheShade from './Image/MadeInTheShade.png';
 
 function App() {
-  let images = [];
+  let images = [
+    imgDualProcessors,
+    imgMadeInTheShade
+  ];
   return (
     <div className="App">
       <CmcdNavBar/>
