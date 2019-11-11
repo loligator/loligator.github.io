@@ -1,20 +1,31 @@
-import React, { useState } from 'react';
+import React, 
+    { 
+        useState, 
+        useRef
+    } from 'react';
 
 // Reference used: https://codepen.io/DZuz14/pen/XxKLVY?editors=0110
-// Not an exact copy, but close enough to give credit
+// Basically the same but translated to using functional component with hooks
 
 const Gallery = (props) => {
 
     // Hooks
     const [index, setIndex] = useState(0);
     const [translate, setTranslate] = useState(0);
-    
+
+    const slide = useRef(null);
+
+    const slideWidth = () => {
+        return slide.current.offsetWidth;
+    }
+
     const goToNextSlide = () => {
         if(index === props.images.length){
             setIndex(0);
         }
         else {
             setIndex(index+1);
+            setTranslate(translate + slideWidth());
         }
     }
 
@@ -24,6 +35,7 @@ const Gallery = (props) => {
         }
         else {
             setIndex(index-1);
+            setTranslate(translate - slideWidth());
         }
     }
 
@@ -37,12 +49,12 @@ const Gallery = (props) => {
         <div className="Gallery">
             <div className="Gallery-wrapper"
                  style={{
-                     transform: `translateX(${this.state.translateValue}px)`,
+                     transform: `translateX(${translate}px)`,
                      transition: 'transform ease-out 0.45s'
                  }}>
                 {
                     props.images.map((image, i) => (
-                        <Slide key={i} image={image} />
+                        <Slide ref={slide} key={i} image={image} />
                     ))
                 }
             </div>
