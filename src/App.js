@@ -21,6 +21,7 @@ function App() {
         </h1>
       </header>
       <Gallery images={images}/>
+      {/*<img src={images[0]} style={{width: "100%"}}/>*/}
     </div>
   );
 }
