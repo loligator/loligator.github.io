@@ -1,7 +1,6 @@
 import React, 
     { 
-        useState, 
-        useRef
+        useState
     } from 'react';
 
 // Reference used: https://codepen.io/DZuz14/pen/XxKLVY?editors=0110
@@ -9,14 +8,12 @@ import React,
 
 const Gallery = (props) => {
 
-    // Hooks
+    // State
     const [index, setIndex] = useState(0);
     const [translate, setTranslate] = useState(0);
-
-    const slide = useRef(null);
-
+    
     const slideWidth = () => {
-        return slide.current.offsetWidth;
+        return document.querySelector('.slide').clientWidth;
     }
 
     const goToNextSlide = () => {
@@ -39,11 +36,13 @@ const Gallery = (props) => {
         }
     }
 
+    /*
     const goToSlide = (i) => {
         if(i >= 0 && i < props.images.length){
             setIndex(i);
         }
     }
+    */
 
     return(
         <div className="Gallery">
@@ -54,7 +53,7 @@ const Gallery = (props) => {
                  }}>
                 {
                     props.images.map((image, i) => (
-                        <Slide ref={slide} key={i} image={image} />
+                        <Slide key={i} image={image} />
                     ))
                 }
             </div>

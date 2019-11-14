@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import './App.css';
 
 import CmcdNavBar from './Components/cmcdNavBar';
@@ -14,6 +15,9 @@ function App() {
   ];
   return (
     <div className="App">
+      <Helmet>
+        <title>Connor McDermott - Gameplay Programmer</title>
+      </Helmet>
       <CmcdNavBar/>
       <header className="App-title">
         <h1>
