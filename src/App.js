@@ -4,15 +4,26 @@ import './App.css';
 
 import CmcdNavBar from './Components/cmcdNavBar';
 import Gallery from './Components/Gallery';
+import GamesListing from './Components/GamesListing';
 
 import imgDualProcessors from './Image/DualProcessors.png';
 import imgMadeInTheShade from './Image/MadeInTheShade.png';
 
+import { Descriptions } from './Constants';
+
 function App() {
-	let images = [
-		imgDualProcessors,
-		imgMadeInTheShade
-	];
+	let games = [
+		{
+			title: "Dual Processors",
+			image: imgDualProcessors,
+			desc: Descriptions.DualProcessors
+		},
+		{
+			title: "Made In The Shade",
+			image: imgMadeInTheShade,
+			desc: Descriptions.MadeInTheShade
+		}
+	]
 	return (
 		<div className="App">
 			<Helmet>
@@ -30,7 +41,9 @@ function App() {
 				</div>
 			</header>
 			{/*<Gallery images={images}/>*/}
-			<img src={images[0]} style={{width: "100%"}} alt=""/>
+			<img src={games[0].image} style={{width: "100%"}} alt=""/>
+
+			<GamesListing games={games}/>
 
 		</div>
 	);

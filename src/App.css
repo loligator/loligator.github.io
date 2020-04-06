@@ -43,7 +43,8 @@
 }
 
 .title{
-	
+	margin: 0;
+	padding: 0;
 }
 
 .subtitle{
@@ -99,4 +100,28 @@
 .fa-arrow-right:before,
 .fa-arrow-left:before {
 	color: #222;
+}
+.games-listing {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.listing-container {
+	border: 3px solid blue;
+	padding: 20px 40px 40px;
+	max-width: 640px;
+	display:flex;
+}
+
+.listing-continer > .left {
+	flex-direction: row;
+}
+
+.listing-container > .right {
+	flex-direction: row-reverse;
+}
+
+.listing-image {
+	
 }
