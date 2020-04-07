@@ -14,7 +14,7 @@ const Listing = (props) => {
 		<>
 			<div className={"listing-container " + containerClass}>
 				<div className="listing-image-container">
-					<img src={game.image} className="listing-image"/>
+					<img src={game.image} alt="" className="listing-image"/>
 				</div>
 				<div className="listing-text-container">
 					<h3>{game.title}</h3>

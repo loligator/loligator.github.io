@@ -4,11 +4,13 @@ const Bio = (props) => {
 	return (
 		<>
 			<div className="bio-container">
-				<h1 className="title">About Me</h1>
-				<img src={props.content.ProfilePic}/>
-				<p>{props.content.Intro}</p>
-				<p>{props.content.WhereIWork}</p>
-				<p>{props.content.AboutGameDev}</p>
+					<img className="bio-profile-pic"  src={props.content.ProfilePic} alt=""/>
+					<div className="bio-text">
+						<h1 className="title">About Me</h1>
+						<p>{props.content.Intro}</p>
+						<p>{props.content.WhereIWork}</p>
+						<p>{props.content.AboutGameDev}</p>
+					</div>
 			</div>
 		</>
 	);
