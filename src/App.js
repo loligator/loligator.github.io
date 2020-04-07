@@ -5,11 +5,12 @@ import './App.css';
 import CmcdNavBar from './Components/cmcdNavBar';
 import Gallery from './Components/Gallery';
 import GamesListing from './Components/GamesListing';
+import Bio from './Components/Bio'
 
 import imgDualProcessors from './Image/DualProcessors.png';
 import imgMadeInTheShade from './Image/MadeInTheShade.png';
 
-import { Descriptions } from './Constants';
+import { Descriptions, BioContent } from './Constants';
 
 function App() {
 	let games = [
@@ -41,8 +42,8 @@ function App() {
 				</div>
 			</header>
 			{/*<Gallery images={images}/>*/}
-			<img src={games[0].image} style={{width: "100%"}} alt=""/>
-
+			<img src={games[0].image} className="coverImage" alt=""/>
+			<Bio content={BioContent}/>
 			<GamesListing games={games}/>
 
 		</div>

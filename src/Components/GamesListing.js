@@ -14,7 +14,7 @@ const GamesListing = (props) => {
 			{
 				games.map(g => (
 					<>
-						<Listing game={g} index={gameIndex}/>
+						<Listing game={g} index={gameIndex++}/>
 					</>
 				))
 			}
