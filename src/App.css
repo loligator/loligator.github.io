@@ -127,6 +127,14 @@
 	display: inline;
 }
 
+.text {
+	color: #fff;
+}
+
+.small {
+	font-size: 8pt;
+}
+
 .games-listing {
 	color: #fff;
 	display: flex;
@@ -171,6 +179,16 @@
 	background-size: cover;
 }
 
+/*
+.mits-parallax-offset {
+	background-position: 300px -100px;
+}
+
+.dp-parallax-offset {
+	background-position: -300px -100px;
+}
+*/
+
 .bgimg-test-mits {
 	background-image: url("Image/MadeInTheShade.png");
 	min-height: 100%
@@ -185,4 +203,23 @@
 	background-color: #4bd1a0;
 	margin: auto;
 	padding: 10px;
+}
+
+.footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.socials-container {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;;
+}
+
+.social-icon {
+	height: 32px;
+	width: 32px;
+	margin: 5px;
 }
