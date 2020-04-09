@@ -10,12 +10,18 @@ const Listing = (props) => {
 
 	let containerClass = (isLeft ? "left" : "right");
 
+	let imgStyle = {
+		"background-image": "url(" + game.image + ")",
+		"min-height": "100%"
+	};
+
 	return (
 		<>
 			<div className={"listing-container " + containerClass}>
-				<div className="listing-image-container">
-					<img src={game.image} alt="" className="listing-image"/>
-				</div>
+				<div
+					className="listing-image-container parallax"
+					style={imgStyle}
+				></div>
 				<div className="listing-text-container">
 					<h3>{game.title}</h3>
 					<p>{game.desc}</p>
