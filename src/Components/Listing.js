@@ -6,7 +6,7 @@ const Listing = (props) => {
 
 	let isLeft = props.index % 2 === 0;
 
-	let containerClass = (isLeft ? "left" : "right");
+	let containerClass = (isLeft ? styles.left : styles.right);
 
 	let imgStyle = {
 		"background-image": "url(" + game.image + ")",
@@ -14,12 +14,12 @@ const Listing = (props) => {
 	};
 
 	return (
-		<div className={"listing-container " + containerClass}>
+		<div className={styles.container + " " + containerClass}>
 			<div
-				className="listing-image-container parallax"
+				className={styles.imageContainer + " parallax"}
 				style={imgStyle}
 			></div>
-			<div className="listing-text-container">
+			<div className={styles.textContainer}>
 				<h3 className={styles.heading}>{game.title}</h3>
 				<p className={styles.content}>{game.desc}</p>
 			</div>
