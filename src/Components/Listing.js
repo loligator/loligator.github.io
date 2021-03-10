@@ -13,18 +13,16 @@ const Listing = (props) => {
 	};
 
 	return (
-		<>
-			<div className={"listing-container " + containerClass}>
-				<div
-					className="listing-image-container parallax"
-					style={imgStyle}
-				></div>
-				<div className="listing-text-container">
-					<h3>{game.title}</h3>
-					<p>{game.desc}</p>
-				</div>
+		<div className={"listing-container " + containerClass}>
+			<div
+				className="listing-image-container parallax"
+				style={imgStyle}
+			></div>
+			<div className="listing-text-container">
+				<h3 className={"listing__header"}>{game.title}</h3>
+				<p className={"listing__content"}>{game.desc}</p>
 			</div>
-		</>
+		</div>
 	);
 }
 
