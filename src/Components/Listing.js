@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../Styles/Components/Listing.module.css';
 
 const Listing = (props) => {
 	let game = props.game;
@@ -19,8 +20,8 @@ const Listing = (props) => {
 				style={imgStyle}
 			></div>
 			<div className="listing-text-container">
-				<h3 className={"listing__header"}>{game.title}</h3>
-				<p className={"listing__content"}>{game.desc}</p>
+				<h3 className={styles.heading}>{game.title}</h3>
+				<p className={styles.content}>{game.desc}</p>
 			</div>
 		</div>
 	);
