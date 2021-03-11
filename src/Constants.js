@@ -1,4 +1,5 @@
 import imgProfilePic from './Image/ProfilePic.png';
+import linkedInIcon from './Image/Icons/linkedin-white.png';
 
 export const Descriptions = {
 	MadeInTheShade: "Made In The Shade is a stealth game made as a college project. From a top-down perspective, the player uses abilities to evade robot guards and pull off heists.",
@@ -15,7 +16,7 @@ export const BioContent = {
 export const Socials = [
 	{
 		Name: "LinkedIn",
-		imgUrl: "https://static-exp1.licdn.com/scds/common/u/images/logos/favicons/v1/favicon.ico",
+		imgUrl: linkedInIcon,
 		Url: "https://www.linkedin.com/in/connor-mcdermott-97a2938b/"
 	},
 	{
@@ -25,4 +26,4 @@ export const Socials = [
 	}
 ]
 
-export const CopyWrite = "©2020 Design by Nikita Kumar, Dev by Connor McDermott";
+export const CopyWrite = "©2021 Design by Nikita Kumar, Dev by Connor McDermott";
