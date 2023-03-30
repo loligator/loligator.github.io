@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from '../Styles/Components/Listing.module.css';
 
-const Listing = (props) => {
+const Listing = (props: any) => {
 	let game = props.game;
 
 	let isLeft = props.index % 2 === 0;
 
 	let containerClass = (isLeft ? styles.left : styles.right);
 
-	let imgStyle = {
-		"background-image": "url(" + game.image + ")",
-		"min-height": "100%"
+	let imgStyle: React.CSSProperties = {
+		"backgroundImage": "url(" + game.image + ")",
+		"minHeight": "100%"
 	};
 
 	return (

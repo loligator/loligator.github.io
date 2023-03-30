@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Navbar,
+import {
+	Navbar,
 	Nav,
 	NavItem,
 	NavLink,
@@ -8,7 +9,8 @@ import {Navbar,
 	DropdownToggle,
 	DropdownMenu,
 	DropdownItem
-	} from 'reactstrap';
+	} 
+from 'reactstrap';
 
 function CmcdNavBar() {
 

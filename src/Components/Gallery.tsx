@@ -2,18 +2,19 @@ import React,
 	{ 
 		useState
 	} from 'react';
+import { NavItem } from 'reactstrap';
 
 // Reference used: https://codepen.io/DZuz14/pen/XxKLVY?editors=0110
 // Basically the same but translated to using functional component with hooks
 
-const Gallery = (props) => {
+const Gallery = (props: any) => {
 
 	// State
 	const [index, setIndex] = useState(0);
 	const [translate, setTranslate] = useState(0);
 	
 	const slideWidth = () => {
-		return document.querySelector('.slide').clientWidth;
+		return document.querySelector('.slide')?.clientWidth ?? 0;
 	}
 
 	const goToNextSlide = () => {
@@ -52,7 +53,7 @@ const Gallery = (props) => {
 					 transition: 'transform ease-out 0.45s'
 				 }}>
 				{
-					props.images.map((image, i) => (
+					props.images.map((image: any, i: any) => (
 						<Slide key={i} image={image} />
 					))
 				}
@@ -68,7 +69,7 @@ const Gallery = (props) => {
 	);
 };
 
-const Slide = ({image}) => {
+const Slide = ({image}: {image: any}) => {
 	const styles = {
 		backgroundImage: image,
 		backgroundSize: 'cover',
@@ -78,7 +79,7 @@ const Slide = ({image}) => {
 	return <div className="slide" style={styles}></div>
 }
 
-const LeftArrow = (props) => {
+const LeftArrow = (props: any) => {
 	return (
 		<div className="backArrow arrow" onClick={props.goToPrevSlide}>
 			<i className="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
@@ -86,7 +87,7 @@ const LeftArrow = (props) => {
 	);
 }
 
-const RightArrow = (props) => {
+const RightArrow = (props: any) => {
 	return (
 		<div className="nextArrow arrow" onClick={props.goToNextSlide}>
 			<i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>

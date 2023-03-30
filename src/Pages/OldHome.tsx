@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import './App.css';
 
 import CmcdNavBar from '../Components/cmcdNavBar';
-//import Gallery from './Components/Gallery';
 import GamesListing from '../Components/GamesListing';
 import Bio from '../Components/Bio'
 import Footer from '../Components/Footer';
@@ -42,7 +41,6 @@ function OldHome() {
 					</h4>
 				</div>
 			</header>
-			{/*<Gallery images={images}/>*/}
 			<img src={games[0].image} className="coverImage" alt=""/>
 			<Bio content={BioContent}/>
 			<GamesListing games={games}/>
@@ -51,4 +49,4 @@ function OldHome() {
 	);
 }
 
-export default App;
+export default OldHome;

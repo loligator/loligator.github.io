@@ -2,7 +2,11 @@ import React from 'react';
 
 import Listing from './Listing';
 
-const GamesListing = (props) => {
+interface GamesListingProps {
+	games: any[],
+}
+
+const GamesListing = (props: GamesListingProps) => {
 	let games = props.games;
 
 	let gameIndex = 0;
