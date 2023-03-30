@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Bio = (props) => {
+const Bio = (props: any) => {
 	return (
 		<>
 			<div className="bio-container">
