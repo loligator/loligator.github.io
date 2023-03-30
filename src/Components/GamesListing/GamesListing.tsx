@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Listing from './Listing';
+import Listing from '../Listing/Listing';
 
 interface GamesListingProps {
 	games: any[],

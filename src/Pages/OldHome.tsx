@@ -2,10 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import './App.css';
 
-import CmcdNavBar from '../Components/cmcdNavBar';
-import GamesListing from '../Components/GamesListing';
-import Bio from '../Components/Bio'
-import Footer from '../Components/Footer';
+import CmcdNavBar from '../Components/cmcdNavBar/cmcdNavBar';
+import GamesListing from '../Components/GamesListing/GamesListing';
+import Bio from '../Components/Bio/Bio'
+import Footer from '../Components/Footer/Footer';
 
 import imgDualProcessors from './Image/DualProcessors.png';
 import imgMadeInTheShade from './Image/MadeInTheShade.png';
