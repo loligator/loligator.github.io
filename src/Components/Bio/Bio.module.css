@@ -1,0 +1,18 @@
+.bioContainer {
+	max-width: 75%;
+	margin: 2em auto 2em auto;
+	color: #fff;
+	text-align: left;
+}
+
+.bioProfilePic {
+	object-fit: fill;
+	height: 100%;
+	padding-right: 10px;
+	max-height: 200px;
+	float: left;
+}
+
+.bioText {
+	display: inline;
+}

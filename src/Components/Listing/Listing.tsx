@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../Styles/Components/Listing.module.css';
+import styles from './Listing.module.css';
 
 const Listing = (props: any) => {
 	let game = props.game;

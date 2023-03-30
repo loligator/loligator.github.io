@@ -10,7 +10,7 @@ import Footer from '../Components/Footer/Footer';
 import imgDualProcessors from './Image/DualProcessors.png';
 import imgMadeInTheShade from './Image/MadeInTheShade.png';
 
-import { Descriptions, BioContent, Socials, CopyWrite } from '../Constants';
+import { Descriptions, CMcDBioContent, Socials, CopyWrite } from '../Constants';
 
 function OldHome() {
 	let games = [
@@ -42,7 +42,7 @@ function OldHome() {
 				</div>
 			</header>
 			<img src={games[0].image} className="coverImage" alt=""/>
-			<Bio content={BioContent}/>
+			<Bio content={CMcDBioContent}/>
 			<GamesListing games={games}/>
 			<Footer socials={Socials} copywrite={CopyWrite}/>
 		</div>

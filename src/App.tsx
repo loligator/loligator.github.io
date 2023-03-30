@@ -4,7 +4,7 @@ import Bio from './Components/Bio/Bio';
 import CmcdNavBar from './Components/cmcdNavBar/cmcdNavBar';
 
 import { Helmet } from 'react-helmet';
-import { BioContent } from './Constants';
+import { CMcDBioContent } from './Constants';
 
 function App() {
 	return (
@@ -13,7 +13,7 @@ function App() {
 				<title>Connor McDermott - Software Engineer</title>
 			</Helmet>
 			<CmcdNavBar />
-			<Bio content={BioContent}/>
+			<Bio content={CMcDBioContent}/>
 		</div>
 	);
 }
