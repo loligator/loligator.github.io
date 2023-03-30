@@ -1,11 +1,10 @@
-.bioContainer {
+.bio-container {
 	max-width: 75%;
 	margin: 2em auto 2em auto;
-	color: #fff;
 	text-align: left;
 }
 
-.bioProfilePic {
+.bio-profile-pic {
 	object-fit: fill;
 	height: 100%;
 	padding-right: 10px;
@@ -13,6 +12,6 @@
 	float: left;
 }
 
-.bioText {
+.bio-text {
 	display: inline;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BioContent } from '../../Constants';
 
-import Styles from './Bio.module.css'; 
+import styles from './Bio.module.css'; 
 
 export interface BioProps {
 	content: BioContent,
@@ -9,17 +9,15 @@ export interface BioProps {
 
 const Bio = ({content}: BioProps) => {
 	return (
-		<>
-			<div className="bio-container">
-					<img className={Styles.bioProfilePic}  src={content.ProfilePic} alt=""/>
-					<div className={Styles.bioText}>
-						<h1 className="title">About Me</h1>
-						<p>{content.Intro}</p>
-						<p>{content.WhereIWork}</p>
-						<p>{content.AboutGameDev}</p>
-					</div>
+		<div className={styles.bioContainer}>
+			<img className={styles.bioProfilePic}  src={content.ProfilePic} alt=""/>
+			<div className={styles.bioText}>
+				<h1 className="title">About Me</h1>
+				<p>{content.Intro}</p>
+				<p>{content.WhereIWork}</p>
+				<p>{content.AboutGameDev}</p>
 			</div>
-		</>
+		</div>
 	);
 }
 
