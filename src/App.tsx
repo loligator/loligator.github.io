@@ -8,8 +8,7 @@ import { CMcDBioContent } from './Constants';
 import bioContent from './content/bio';
 
 import styles from './App.module.css';
-import { Hero } from './Components/Toys/Hero/Hero';
-import { Plinko } from './Components/Toys/Plinko/Plinko';
+import { Fireworks } from './Components/Toys/Fireworks/Fireworks';
 
 function App() {
 	return (
@@ -18,9 +17,8 @@ function App() {
 				<title>Connor McDermott - Software Engineer</title>
 			</Helmet>
 			<CmcdNavBar />
-			<Hero/>
+			<Fireworks />
 			<Bio content={bioContent} profilePic={CMcDBioContent.ProfilePic}/>
-			<Plinko />
 		</div>
 	);
 }
