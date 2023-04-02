@@ -70,7 +70,6 @@ export const Fireworks = () => {
 	}
 
 	const draw = (p5: P5) => {
-		console.log(`${fireworksState.mortars.length} ${fireworksState.fireworks.length}`);
 		if (p5.frameCount % 60 === 0) {
 			newMortar();
 		}
