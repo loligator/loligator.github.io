@@ -1,21 +1,19 @@
 import React from 'react';
-import { BioContent } from '../../Constants';
+import ReactMarkdown from 'react-markdown';
 
 import styles from './Bio.module.css'; 
 
 export interface BioProps {
-	content: BioContent,
+	profilePic: string,
+	content: string,
 }
 
-const Bio = ({content}: BioProps) => {
+const Bio = (props: BioProps) => {
 	return (
-		<div className={styles.bioContainer}>
-			<img className={styles.bioProfilePic}  src={content.ProfilePic} alt=""/>
-			<div className={styles.bioText}>
-				<h1 className="title">About Me</h1>
-				<p>{content.Intro}</p>
-				<p>{content.WhereIWork}</p>
-				<p>{content.AboutGameDev}</p>
+		<div className={styles['bio-container']}>
+			<img className={styles['bio-profile-pic']}  src={props.profilePic} alt=""/>
+			<div className={styles['bio-text']}>
+				<ReactMarkdown children={props.content}/>
 			</div>
 		</div>
 	);

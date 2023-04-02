@@ -16,7 +16,7 @@ export interface BioContent {
 export const CMcDBioContent = {
 	ProfilePic: imgProfilePic,
 	Intro: "Greetings, fellow human! My name is Connor McDermott, I am a Software Engineer with a love for gameplay programming, .NET, Linux, and Pizza.",
-	WhereIWork: "I currently work at Perficient, Inc as a Technical Consultant. My work is mostly focused on .NET and web development. I typically take on a full stack approach, as I like to have a sense of what goes on top to bottom, otherwise debugging can get very mysterious!",
+	WhereIWork: "I am currently looking for full-time work! My work is mostly focused on .NET and web development. I typically take on a full stack approach, as I like to have a sense of what goes on top to bottom, otherwise debugging can get very mysterious!",
 	AboutGameDev: "While it's not my day job, I'm very passionate about Game Development as a hobby. I always have a game project in progress! I'm currently (slowly) working on a Resident Evil inspired top-down shooter in Unity."
 }
 

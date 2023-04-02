@@ -1,6 +1,8 @@
 .App {
 	text-align: center;
-	background-color: #282c34
+	background-color: #282c34;
+	color: #fff;
+	min-height: 100vh;
 }
 
 .App-logo {
@@ -106,25 +108,6 @@
 .fa-arrow-right:before,
 .fa-arrow-left:before {
 	color: #222;
-}
-
-.bio-container {
-	max-width: 75%;
-	margin: 2em auto 2em auto;
-	color: #fff;
-	text-align: left;
-}
-
-.bio-profile-pic {
-	object-fit: fill;
-	height: 100%;
-	padding-right: 10px;
-	max-height: 200px;
-	float: left;
-}
-
-.bio-text {
-	display: inline;
 }
 
 .text {
