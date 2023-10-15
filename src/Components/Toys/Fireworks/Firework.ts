@@ -6,10 +6,10 @@ class FireworkParticle {
 	radius: number;
 	color: P5.Color;
 
-	timeAlive: number;
+	framesAlive: number;
 
 	constructor(world: World, x: number, y: number, dir: Vector, color: P5.Color) {
-		this.timeAlive = 0;
+		this.framesAlive = 0;
 		this.radius = 1;
 		this.color = color;
 		this.body = Bodies.circle(x, y, 1, {
@@ -41,13 +41,13 @@ class Firework {
 	subParticles: FireworkParticle[];
 	x: number;
 	y: number;
-	timeAlive: number;
+	framesAlive: number;
 	color: P5.Color
 
 	constructor(world: World, x: number, y: number, count: number, color: P5.Color) {
 		this.x = x;
 		this.y = y;
-		this.timeAlive = 0;
+		this.framesAlive = 0;
 		this.color = color;
 		
 		this.subParticles = [];
@@ -63,17 +63,27 @@ class Firework {
 		}
 	}
 
-	show(p5: P5) {
-		this.timeAlive++;
+	show(world: World, p5: P5) {
+		if (this.framesAlive > 50) {
+			while (this.subParticles.length !== 0) {
+				let firework = this.subParticles.pop();
+				if (firework !== undefined) {
+					World.remove(world, firework?.body);
+				}
+			}
+			return false;
+		}
+		this.framesAlive++;
 		p5.fill(this.color);
 		p5.stroke(this.color);
 		p5.push();
 		p5.translate(this.x, this.y);
-		p5.ellipse(0, 0, this.timeAlive * 10);
+		p5.ellipse(0, 0, this.framesAlive * 10);
 		p5.pop();
 		this.subParticles.forEach((p) => {
 			p.show(p5);
 		});
+		return true;
 	}
 }
 

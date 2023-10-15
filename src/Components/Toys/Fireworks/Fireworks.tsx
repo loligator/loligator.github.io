@@ -19,7 +19,7 @@ interface FireworkState {
 let fireworksState: FireworkState;
 let bg: P5.Image;
 
-export const Fireworks = () => {
+export const FireworksHero = () => {
 	const windowSize = useWindowResize();
 
 	const setup = (p5: P5, canvasParentRef: Element) => {
@@ -57,7 +57,6 @@ export const Fireworks = () => {
 				color
 			)
 		)
-		setTimeout(() => {fireworksState.fireworks.pop()}, 1000);
 	}
 
 	const pickColor = (p5: P5): P5.Color => {
@@ -85,12 +84,17 @@ export const Fireworks = () => {
 					pickColor(p5)
 				);
 				fireworksState.mortars.splice(i, 1);
+				
 				i--;
 			}
 		}
-		fireworksState.fireworks.forEach((f) => {
-			f.show(p5);
-		});
+		for (let i = 0; i < fireworksState.fireworks.length; i++) {
+			let f = fireworksState.fireworks[i];
+			if (!f.show(fireworksState.world, p5)) {
+				fireworksState.fireworks.splice(i, 1);
+				i--;
+			}
+		}
 	}
 
 	const handleClick = (p5: P5) => {
