@@ -9,6 +9,7 @@ import bioContent from './content/bio';
 
 import styles from './App.module.css';
 import { FireworksHero } from './Components/Toys/Fireworks/Fireworks';
+import { CmcdFooter  } from './Components/cmcdFooter/cmcdFooter';
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 			<CmcdNavBar />
 			<FireworksHero />
 			<Bio content={bioContent} profilePic={CMcDBioContent.ProfilePic}/>
+			<CmcdFooter />
 		</div>
 	);
 }

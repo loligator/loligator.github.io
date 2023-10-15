@@ -15,23 +15,23 @@
 }
 
 .imageContainer {
-  width: 50%;
+	width: 50%;
 }
 
 .textContainer {
-  width: 50%;
+	width: 50%;
 	background-color: #4bd1a0;
 	margin: auto;
 	padding: 10px;
 }
 
 .heading {
-  color: white;
-  font-size: 48px;
+	color: white;
+	font-size: 48px;
 }
 
 .content {
-  color: black;
-  font-size: 21px;
-  font-weight: 400;
+	color: black;
+	font-size: 21px;
+	font-weight: 400;
 }
