@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import styles from './NavItem.module.css';
+import styles from './NavItem.module.scss';
 
 interface NavItemProps {
 	title: string,
@@ -10,11 +11,10 @@ interface NavItemProps {
 export const NavItem: React.FC<NavItemProps> = (props) => {
 
 	return (
-		<a
-			className={styles.link}
-			href={props.href}
-		>
-			{props.title}
-		</a>
+		<div className={styles.container}>
+			<Link className={styles.link} to={props.href}>
+				{props.title}
+			</Link>
+		</div>
 	);
 }
