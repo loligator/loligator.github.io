@@ -5,14 +5,14 @@ import styles from './NavItem.module.scss';
 
 interface NavItemProps {
 	title: string,
-	href: string
+	path: string
 }
 
 export const NavItem: React.FC<NavItemProps> = (props) => {
 
 	return (
 		<div className={styles.container}>
-			<Link className={styles.link} to={props.href}>
+			<Link className={styles.link} to={props.path}>
 				{props.title}
 			</Link>
 		</div>

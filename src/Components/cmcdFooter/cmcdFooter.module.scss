@@ -1,0 +1,15 @@
+.footerContainer {
+	width: 100vw;
+	background-color: rgb(30, 30, 30);
+
+	min-height: 50vh;
+}
+
+.columns {
+	display: flex;
+	justify-content: center;
+
+	& .column {
+		text-align: left;
+	}
+}

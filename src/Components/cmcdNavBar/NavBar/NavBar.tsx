@@ -11,7 +11,7 @@ interface NavBarProps {
 export const NavBar: React.FC<NavBarProps> = (props) => {
 	return (
 		<div className={ styles.NavbarContainer }>
-			<div className={ styles.leftElements }>
+			<div className={ styles.leftChildren }>
 				{ props.leftChildren }
 			</div>
 			<div className={ styles.NavElements }>

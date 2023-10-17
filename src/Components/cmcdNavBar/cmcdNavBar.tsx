@@ -7,9 +7,9 @@ function CmcdNavBar() {
 
 	return(
 		<NavBar>
-			<NavItem title="HOME" href="/"/>
-			<NavItem title="RESUME" href="/resume" />
-			<NavItem title="CONTACT" href="/#contact" />
+			<NavItem title="HOME" path="/"/>
+			<NavItem title="RESUME" path="/resume" />
+			<NavItem title="CONTACT" path="/#contact" />
 		</NavBar>
 	);
 }

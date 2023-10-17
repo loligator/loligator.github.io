@@ -1,0 +1,104 @@
+.container {
+	display: flex;
+	align-content: center;
+
+	& > * {
+		margin-right: 0.5em;
+	}
+}
+
+.iconBorder {
+	border-radius: 50%;
+	border: 2px solid #ffffff7f;
+	height: 2.5em;
+	width: 2.5em;
+	transition: all 0.2s ease-in-out;
+	background: transparent;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		background-color: #fff;
+
+		.icon {
+			fill: #000;
+		}
+	}
+
+	& .icon {
+		height: 1.5em;
+		width: 1.5em;
+
+		transition: all 0.2s ease-in-out;
+		fill: #ffffff;
+		background-color: transparent;
+
+		&:hover {
+			fill: #000;
+		}
+	}
+}
+
+.LinkedIn {
+	&:hover {
+		background-color: rgb(10, 102, 194);
+
+		.icon {
+			fill: #fff;
+		}
+	}
+}
+
+.Github {
+	&:hover {
+		.icon {
+			fill: #000;
+		}
+	}
+}
+
+.Instagram {
+	position: relative;
+	z-index: 1;
+
+	&:hover {
+		.icon {
+			fill: #fff;
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		border-radius: 50%;
+		transition: opacity 0.2s ease-in-out;
+		opacity: 0;
+		background-image: radial-gradient(
+				circle at 25% 110%,
+				#fdf497 0,
+				#fdf497 5%,
+				#fd5949 45%,
+				#d6249f 60%,
+				#285aeb 90%
+			),
+			radial-gradient(
+				circle at 25% 110%,
+				#b9a800 0,
+				#938500 5%,
+				#b10f00 45%,
+				#8c0061 60%,
+				#002ca9 90%
+			);
+	}
+}
