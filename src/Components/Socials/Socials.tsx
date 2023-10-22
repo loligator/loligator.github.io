@@ -9,40 +9,54 @@ import { ReactComponent as InstagramIcon } from '../../Image/Icons/Instagram/03 
 const socials: {
 	name: string;
 	cssClass: string;
-	icon: React.FunctionComponent<React.SVGProps<SVGSVGElement> & {
-    title?: string | undefined;
-	}>,
-	href: string,
+	icon: React.FunctionComponent<
+		React.SVGProps<SVGSVGElement> & {
+			title?: string | undefined;
+		}
+	>;
+	href: string;
 }[] = [
 	{
 		name: 'LinkedIn',
 		cssClass: styles.LinkedIn,
 		icon: LinkedInIcon,
-		href: "https://www.linkedin.com/in/connor-mcdermott-97a2938b/",
+		href: 'https://www.linkedin.com/in/connor-mcdermott-97a2938b/',
 	},
 	{
 		name: 'Github',
 		cssClass: styles.Github,
 		icon: GithubIcon,
-		href: "https://github.com/loligator/"
+		href: 'https://github.com/loligator/',
 	},
 	{
 		name: 'Instagram',
 		cssClass: styles.Instagram,
 		icon: InstagramIcon,
-		href: ""
+		href: '',
 	},
 ];
 
-export const Socials: React.FC = () => {
+interface SocialsProps {
+	largeIcons?: boolean;
+}
 
+export const Socials: React.FC<SocialsProps> = (props) => {
 	return (
 		<div className={styles.container}>
-			{socials.map(s => (
-				<div className={styles.iconBorder + ' ' + s.cssClass}>
+			{socials.map((s) => (
+				<div
+					key={s.name}
+					className={
+						styles.iconBorder +
+						' ' +
+						s.cssClass +
+						' ' +
+						(props.largeIcons ? styles.largeIcons : '')
+					}
+				>
 					<s.icon className={styles.icon} />
 				</div>
 			))}
 		</div>
 	);
-}
+};

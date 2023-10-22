@@ -11,7 +11,7 @@
 		"format:write": "prettier . --write"
 	},
 	"dependencies": {
-		"@types/matter-js": "^0.18.2",
+		"@wildpeaks/three-webpack-plugin": "^2.0.0",
 		"matter-js": "^0.19.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
@@ -19,19 +19,23 @@
 		"react-markdown": "^8.0.6",
 		"react-p5": "^1.3.35",
 		"react-router-dom": "^6.16.0",
-		"react-scripts": "^5.0.1"
+		"react-scripts": "^5.0.1",
+		"three": "^0.157.0",
+		"three-addons": "^1.2.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^29.5.0",
+		"@types/matter-js": "^0.18.2",
 		"@types/node": "^18.15.11",
 		"@types/react": "^18.0.31",
 		"@types/react-dom": "^18.0.11",
 		"@types/react-helmet": "^6.1.2",
+		"@types/three": "^0.157.0",
 		"prettier": "^3.0.3",
 		"ts-jest": "^29.0.5",
 		"ts-node": "^10.9.1",
 		"typescript": "^4.9.5",
-		"typescript-plugin-css-modules": "^5.0.0"
+		"typescript-plugin-css-modules": "^5.0.2"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -39,7 +43,7 @@
 	"prettier": {
 		"useTabs": true,
 		"trailingComma": "es5",
-		"semi": false,
+		"semi": true,
 		"singleQuote": true
 	},
 	"browserslist": {

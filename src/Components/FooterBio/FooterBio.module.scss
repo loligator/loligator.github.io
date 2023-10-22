@@ -1,0 +1,29 @@
+@import '../../index.scss';
+
+.bioContainer {
+	display: flex;
+	flex-direction: row;
+	margin: 2em auto 2em auto;
+	text-align: left;
+}
+
+.bioProfilePic {
+	object-fit: cover;
+	margin-top: 2em;
+	padding-right: 10px;
+	width: 200px;
+	float: left;
+}
+
+.bioText,
+.bioText p {
+	display: inline;
+	color: $white;
+}
+
+.spacing {
+	padding: 1em 0;
+}
+
+.rightContainer {
+}

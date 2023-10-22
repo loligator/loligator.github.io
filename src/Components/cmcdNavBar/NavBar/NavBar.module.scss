@@ -1,16 +1,152 @@
+@import '../../../index.scss';
+
 .NavbarContainer {
 	width: 100vw;
-	min-height: 3em;
+	min-height: 3rem;
 
 	background-color: rgb(30, 30, 30);
 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	.NavElements {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: auto 1rem auto 1rem;
+	}
+
+	.leftElements {
+		padding: 1rem;
+		position: absolute;
+		left: 0;
+	}
+
+	.rightElements {
+		padding: 1rem;
+		position: absolute;
+		right: 0;
+	}
 }
 
-.NavbarContainer .NavElements {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+.workItem {
+	color: $first-color;
+}
+
+.desktopOnly {
+	@media screen and (max-width: $tablet) {
+		display: none !important;
+	}
+}
+
+.mobileOnly {
+	@media screen and (min-width: $tablet) {
+		display: none !important;
+	}
+}
+
+.hamburger {
+	&Button {
+		position: absolute;
+		right: 1rem;
+		border-radius: 50%;
+		height: 3rem;
+		z-index: 1000;
+	}
+
+	&Icon {
+		position: relative;
+		margin-top: 1.4rem;
+
+		&,
+		&::before,
+		&::after {
+			width: 2.5rem;
+			height: 3px;
+			background-color: $white;
+			border-radius: 2px;
+			display: inline-block;
+			transition: all 0.2s;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+		}
+
+		&::before {
+			top: -0.6rem;
+		}
+		&::after {
+			top: 0.6rem;
+		}
+	}
+
+	&Button:hover &Icon::before {
+		top: -1rem;
+	}
+
+	&Button:hover &Icon::after {
+		top: 1rem;
+	}
+
+	&Button.opened &Icon {
+		background-color: transparent;
+	}
+
+	&Button.opened &Icon:before {
+		top: 0;
+		transform: rotate(135deg);
+	}
+
+	&Button.opened &Icon:after {
+		top: 0;
+		transform: rotate(-135deg);
+	}
+}
+
+.menuOverlay {
+	&Items {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		right: 1rem;
+		top: -8rem;
+		opacity: 0;
+
+		font-size: 1.75em;
+
+		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	&.opened &Items {
+		opacity: 1;
+		top: 4rem;
+	}
+
+	&Background {
+		position: absolute;
+		background-image: radial-gradient($third-color, transparent);
+		border-radius: 50%;
+		height: 3rem;
+		width: 3rem;
+		right: -4rem;
+		top: -4rem;
+
+		transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+	}
+
+	&.opened &Background {
+		transform: scale(80);
+	}
+}
+
+.spacing {
+	margin: 0.9rem 0;
 }

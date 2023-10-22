@@ -2,15 +2,16 @@ import React from 'react';
 
 import CmcdNavBar from '../../cmcdNavBar/cmcdNavBar';
 import { CmcdFooter } from '../../cmcdFooter/cmcdFooter';
-import { HomeHero } from '../../HomeHero/HomeHero';
-
+import { MyWork } from '../../MyWork/MyWork';
+import { Bio } from '../../Bio/Bio';
 
 export const Home: React.FC = () => {
 	return (
 		<>
 			<CmcdNavBar />
-			<HomeHero />
+			<Bio />
+			<MyWork />
 			<CmcdFooter />
 		</>
 	);
-}
+};

@@ -3,11 +3,18 @@
 	background-color: rgb(30, 30, 30);
 
 	min-height: 50vh;
+
+	&.fullscreen {
+		height: 100vh;
+		min-height: 100vh;
+	}
 }
 
 .columns {
 	display: flex;
+	height: 80%;
 	justify-content: center;
+	align-items: center;
 
 	& .column {
 		text-align: left;

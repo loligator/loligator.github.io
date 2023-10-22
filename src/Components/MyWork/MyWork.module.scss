@@ -1,0 +1,62 @@
+@import '../../index.scss';
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+
+	color: $fourth-color;
+
+	& .table {
+		display: flex;
+		border-radius: 1rem;
+		justify-content: space-between;
+		background-color: $first-color;
+		border: 1px solid $third-color;
+
+		@media screen and (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+}
+
+.workItem {
+	color: $white;
+	width: 100%;
+	padding: 1rem 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.sectionTitle {
+		color: $third-color;
+		margin: 0;
+		padding: 1rem 0 0.5rem 0;
+	}
+
+	& > .logo {
+		height: 4rem;
+		width: 6rem;
+		object-fit: contain;
+		border-radius: 1rem;
+		padding: 1rem;
+		margin: 1rem 0 0 0;
+
+		background-color: $white;
+		border: 8px solid $fourth-color;
+
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			margin-top: 0;
+			height: 5rem;
+			width: 7rem;
+			box-shadow: 10px 10px 5px $black;
+		}
+	}
+
+	& > * {
+		padding-bottom: 0.5rem;
+	}
+}

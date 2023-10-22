@@ -21,14 +21,12 @@
     "jsx": "react",
     "plugins": [
       {
-        "name": "typescript-plugin-css-modules",
-        "options": {
-          "classnameTransform": "none"
-        }
+        "name": "typescript-plugin-css-modules"
       }
     ]
   },
   "include": [
-    "src"
-, "src/App.test.tsx"  ]
+    "src",
+    "src/App.test.tsx"
+  ]
 }

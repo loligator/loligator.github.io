@@ -3,7 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import styles from './App.module.css';
+import styles from './App.module.scss';
+import { Contact } from './Components/Pages/Contact/contact';
 import { Home } from './Components/Pages/Home/Home';
 import { Resume } from './Components/Pages/Resume/Resume';
 
@@ -18,6 +19,7 @@ function App() {
 				<Routes>
 					<Route path="/" Component={Home}></Route>
 					<Route path="/resume" Component={Resume}></Route>
+					<Route path="/contact" Component={Contact}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>
