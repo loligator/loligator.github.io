@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.468316fe.css",
+    "main.js": "/static/js/main.8a6d625e.js",
+    "static/media/DualProcessors.png": "/static/media/DualProcessors.ae074c45c1eb8df80678.png",
+    "static/media/ProfilePic.png": "/static/media/ProfilePic.b391bc5c4c1f18604999.png",
+    "static/media/Meta_lockup_positive primary_RGB.svg": "/static/media/Meta_lockup_positive primary_RGB.96692000bcd0aa4947681635f4c76b27.svg",
+    "static/media/MadeInTheShade.png": "/static/media/MadeInTheShade.057ea5c722e2461415a2.png",
+    "static/media/Amazon-AWS.png": "/static/media/Amazon-AWS.99ae03c5e8dbc24c9d7e.png",
+    "static/media/Walgreens.png": "/static/media/Walgreens.428ee03edb5fae0944de.png",
+    "static/media/Instagram_Glyph_Black.svg": "/static/media/Instagram_Glyph_Black.6fcf3886751fb89cf481ae20e31fc7b2.svg",
+    "static/media/Mastercard.svg": "/static/media/Mastercard.5d72a7093590eb8856d7bf34bc60d022.svg",
+    "static/media/github-mark-white.svg": "/static/media/github-mark-white.707e4696e9781a25e944bce30cfa4380.svg",
+    "index.html": "/index.html",
+    "static/media/linkedin.svg": "/static/media/linkedin.da2968071ee092c140ab60447f763f45.svg",
+    "main.468316fe.css.map": "/static/css/main.468316fe.css.map",
+    "main.8a6d625e.js.map": "/static/js/main.8a6d625e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.468316fe.css",
+    "static/js/main.8a6d625e.js"
+  ]
+}
