@@ -6,17 +6,17 @@ const Listing = (props: any) => {
 
 	let isLeft = props.index % 2 === 0;
 
-	let containerClass = (isLeft ? styles.left : styles.right);
+	let containerClass = isLeft ? styles.left : styles.right;
 
 	let imgStyle: React.CSSProperties = {
-		"backgroundImage": "url(" + game.image + ")",
-		"minHeight": "100%"
+		backgroundImage: 'url(' + game.image + ')',
+		minHeight: '100%',
 	};
 
 	return (
-		<div className={styles.container + " " + containerClass}>
+		<div className={styles.container + ' ' + containerClass}>
 			<div
-				className={styles.imageContainer + " parallax"}
+				className={styles.imageContainer + ' parallax'}
 				style={imgStyle}
 			></div>
 			<div className={styles.textContainer}>
@@ -25,6 +25,6 @@ const Listing = (props: any) => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Listing;

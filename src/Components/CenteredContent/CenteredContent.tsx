@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './CenteredContent.module.scss'
+import styles from './CenteredContent.module.scss';
 
 interface CenteredContentProps {
-	children: React.ReactNode[] | React.ReactNode
+	children: React.ReactNode[] | React.ReactNode;
 }
 
 export const CenteredContent: React.FC<CenteredContentProps> = (props) => {
@@ -11,5 +11,5 @@ export const CenteredContent: React.FC<CenteredContentProps> = (props) => {
 		<div>
 			<div className={styles.center}>{props.children}</div>
 		</div>
-	)
-}
+	);
+};

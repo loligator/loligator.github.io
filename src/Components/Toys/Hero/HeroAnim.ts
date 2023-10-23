@@ -13,7 +13,12 @@ export default class HeroAnim {
 	loader: GLTFLoader;
 
 	constructor() {
-		this.camera = new THREE.PerspectiveCamera(70, window.innerWidth / (window.innerHeight * 0.75), 0.01, 10);
+		this.camera = new THREE.PerspectiveCamera(
+			70,
+			window.innerWidth / (window.innerHeight * 0.75),
+			0.01,
+			10
+		);
 		this.camera.position.z = 5;
 
 		this.scene = new THREE.Scene();
@@ -23,9 +28,11 @@ export default class HeroAnim {
 		this.sun.position.z = 3;
 		this.scene.add(this.sun);
 
-		this.renderer = new THREE.WebGLRenderer( { antialias: true } );
-		this.renderer.setSize( window.innerWidth, window.innerHeight * 0.75 );
-		this.renderer.setAnimationLoop(t => {this.animate(t)});
+		this.renderer = new THREE.WebGLRenderer({ antialias: true });
+		this.renderer.setSize(window.innerWidth, window.innerHeight * 0.75);
+		this.renderer.setAnimationLoop((t) => {
+			this.animate(t);
+		});
 
 		this.canvas = this.renderer.domElement;
 
@@ -38,28 +45,28 @@ export default class HeroAnim {
 			this.cube.rotation.x = time / 2000;
 			this.cube.rotation.y = time / 1000;
 		}
-		this.renderer.render( this.scene, this.camera );
+		this.renderer.render(this.scene, this.camera);
 	}
 
-	createObjects (): void {
+	createObjects(): void {
 		this.loadModel('src/Assets/Models/Monkey.gltf');
 	}
 
 	loadModel(path: string) {
 		this.loader.load(
 			path,
-			( gltf ) => {
-        // called when the resource is loaded
-        this.scene.add( gltf.scene );
+			(gltf) => {
+				// called when the resource is loaded
+				this.scene.add(gltf.scene);
 			},
-			( xhr ) => {
+			(xhr) => {
 				// called while loading is progressing
-				console.log( `${( xhr.loaded / xhr.total * 100 )}% loaded` );
+				console.log(`${(xhr.loaded / xhr.total) * 100}% loaded`);
 			},
-			( error ) => {
+			(error) => {
 				// called when loading has errors
-				console.error( 'An error happened', error );
-			},
+				console.error('An error happened', error);
+			}
 		);
 	}
 }

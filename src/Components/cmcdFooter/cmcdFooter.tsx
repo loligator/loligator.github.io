@@ -10,7 +10,13 @@ interface CmcdFooterProps {
 
 export const CmcdFooter: React.FC<CmcdFooterProps> = (props) => {
 	return (
-		<div className={styles.footerContainer + ' ' + (props.fullscreen ? styles.fullscreen : '')}>
+		<div
+			className={
+				styles.footerContainer +
+				' ' +
+				(props.fullscreen ? styles.fullscreen : '')
+			}
+		>
 			<div className={styles.columns}>
 				<div className={styles.column}>
 					<FooterBio profilePic={CMcDBioContent.ProfilePic} />

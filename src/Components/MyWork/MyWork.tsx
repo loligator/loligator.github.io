@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import styles from './MyWork.module.scss'
+import styles from './MyWork.module.scss';
 
-import WalgreensLogo from '../../Image/Icons/Companies/Walgreens.png'
-import AmazonAWSLogo from '../../Image/Icons/Companies/Amazon-AWS.png'
-import MetaLogo from '../../Image/Icons/Meta/1 Positive Primary/RGB/Meta_lockup_positive primary_RGB.svg'
-import MastercardLogo from '../../Image/Icons/Companies/Mastercard.svg'
+import WalgreensLogo from '../../Image/Icons/Companies/Walgreens.png';
+import AmazonAWSLogo from '../../Image/Icons/Companies/Amazon-AWS.png';
+import MetaLogo from '../../Image/Icons/Meta/1 Positive Primary/RGB/Meta_lockup_positive primary_RGB.svg';
+import MastercardLogo from '../../Image/Icons/Companies/Mastercard.svg';
 
-import { WorkItem } from './WorkItem'
+import { WorkItem } from './WorkItem';
 
 export const MyWork: React.FC = () => {
 	return (
@@ -55,5 +55,5 @@ export const MyWork: React.FC = () => {
 				/>
 			</div>
 		</div>
-	)
-}
+	);
+};

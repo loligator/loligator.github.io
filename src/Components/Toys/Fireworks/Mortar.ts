@@ -8,15 +8,15 @@ class Mortar {
 	y: number;
 
 	constructor(world: World, x: number, y: number, r: number) {
-		this.x = (Math.random() * 100) - 50 + x;
+		this.x = Math.random() * 100 - 50 + x;
 		this.y = y;
 		this.radius = r;
 		this.body = Bodies.circle(this.x, y, r);
 		World.add(world, this.body);
 		this.body.mass = 5;
 		this.body.inverseMass = 1 / 5;
-		let myVec = Vector.create((Math.random() * 2) - 1, -4);
-		this.body.force = Vector.mult(Vector.normalise(myVec), .3);
+		let myVec = Vector.create(Math.random() * 2 - 1, -4);
+		this.body.force = Vector.mult(Vector.normalise(myVec), 0.3);
 	}
 
 	show(world: World, p5: P5) {

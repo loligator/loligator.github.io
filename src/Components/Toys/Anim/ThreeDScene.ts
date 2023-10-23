@@ -17,10 +17,15 @@ export const start = (): HTMLCanvasElement => {
 	createStars();
 
 	return element;
-}
+};
 
 export const initScene = (): HTMLCanvasElement => {
-	camera = new Three.PerspectiveCamera(70, window.innerWidth / (window.innerHeight * 0.75), 0.01, 10);
+	camera = new Three.PerspectiveCamera(
+		70,
+		window.innerWidth / (window.innerHeight * 0.75),
+		0.01,
+		10
+	);
 
 	camera.position.z = 5;
 
@@ -31,12 +36,12 @@ export const initScene = (): HTMLCanvasElement => {
 	light.position.z = 3;
 	scene.add(light);
 
-	renderer = new Three.WebGLRenderer( {antialias: true} );
-	renderer.setSize( window.innerWidth, window.innerHeight * 0.75 );
+	renderer = new Three.WebGLRenderer({ antialias: true });
+	renderer.setSize(window.innerWidth, window.innerHeight * 0.75);
 	renderer.setAnimationLoop(animate);
 
 	return renderer.domElement;
-}
+};
 
 const animate = (t: number) => {
 	if (cube) {
@@ -44,16 +49,18 @@ const animate = (t: number) => {
 		cube.rotation.y = t / 1000;
 	}
 
-	renderer.render( scene, camera );
-}
+	renderer.render(scene, camera);
+};
 
 const createObjects = () => {
 	const geometry = new Three.BoxGeometry(0.2, 0.2, 0.2);
-	const material = new Three.MeshPhongMaterial( {color: new Three.Color(0xffffff)});
+	const material = new Three.MeshPhongMaterial({
+		color: new Three.Color(0xffffff),
+	});
 	cube = new Three.Mesh(geometry, material);
 
 	scene.add(cube);
-}
+};
 
 const createStars = () => {
 	const geometry = new Three.BufferGeometry();
@@ -70,20 +77,29 @@ const createStars = () => {
 		vertices.push(x, y, z);
 	}
 
-	geometry.setAttribute('position', new Three.Float32BufferAttribute(vertices, 3));
+	geometry.setAttribute(
+		'position',
+		new Three.Float32BufferAttribute(vertices, 3)
+	);
 
-	material = new Three.PointsMaterial( { size: .3, sizeAttenuation: true, map: sprite, alphaTest: 0.5, transparent: true });
-	material.color.setHSL( 1.0, 0.3, 0.7, Three.SRGBColorSpace );
+	material = new Three.PointsMaterial({
+		size: 0.3,
+		sizeAttenuation: true,
+		map: sprite,
+		alphaTest: 0.5,
+		transparent: true,
+	});
+	material.color.setHSL(1.0, 0.3, 0.7, Three.SRGBColorSpace);
 
-	stars = new Three.Points( geometry, material);
+	stars = new Three.Points(geometry, material);
 	scene.add(stars);
 
-	window.addEventListener('resize', onWindowResize );
-}
+	window.addEventListener('resize', onWindowResize);
+};
 
 const onWindowResize = () => {
-	camera.aspect = window.innerWidth / (window.innerHeight);
+	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
 
 	renderer.setSize(window.innerWidth, window.innerHeight * 0.75);
-}
+};

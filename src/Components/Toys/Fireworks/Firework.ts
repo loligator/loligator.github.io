@@ -1,4 +1,4 @@
-import { Body, Bodies, World, Vector } from "matter-js";
+import { Body, Bodies, World, Vector } from 'matter-js';
 import P5 from 'p5';
 
 class FireworkParticle {
@@ -8,18 +8,24 @@ class FireworkParticle {
 
 	framesAlive: number;
 
-	constructor(world: World, x: number, y: number, dir: Vector, color: P5.Color) {
+	constructor(
+		world: World,
+		x: number,
+		y: number,
+		dir: Vector,
+		color: P5.Color
+	) {
 		this.framesAlive = 0;
 		this.radius = 1;
 		this.color = color;
 		this.body = Bodies.circle(x, y, 1, {
 			collisionFilter: {
-				mask: 0x0000
-			}
+				mask: 0x0000,
+			},
 		});
 		this.body.mass = 1;
 		this.body.inverseMass = 1;
-		this.body.frictionAir = .2;
+		this.body.frictionAir = 0.2;
 		World.add(world, this.body);
 
 		this.body.force = Vector.mult(dir, 10);
@@ -42,24 +48,28 @@ class Firework {
 	x: number;
 	y: number;
 	framesAlive: number;
-	color: P5.Color
+	color: P5.Color;
 
-	constructor(world: World, x: number, y: number, count: number, color: P5.Color) {
+	constructor(
+		world: World,
+		x: number,
+		y: number,
+		count: number,
+		color: P5.Color
+	) {
 		this.x = x;
 		this.y = y;
 		this.framesAlive = 0;
 		this.color = color;
-		
+
 		this.subParticles = [];
 
-		for(let i = 0; i < count; i++) {
-			let dir = Vector.rotate(Vector.create(0, -.01), (2 * Math.PI / count) * i);
-			this.subParticles.push(new FireworkParticle(
-				world, 
-				x, y,
-				dir,
-				color
-			))
+		for (let i = 0; i < count; i++) {
+			let dir = Vector.rotate(
+				Vector.create(0, -0.01),
+				((2 * Math.PI) / count) * i
+			);
+			this.subParticles.push(new FireworkParticle(world, x, y, dir, color));
 		}
 	}
 

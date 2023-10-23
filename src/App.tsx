@@ -14,7 +14,7 @@ function App() {
 			<Helmet>
 				<title>Connor McDermott - Software Engineer</title>
 			</Helmet>
-			
+
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" Component={Home}></Route>

@@ -3,7 +3,7 @@ import React from 'react';
 import Listing from '../Listing/Listing';
 
 interface GamesListingProps {
-	games: any[],
+	games: any[];
 }
 
 const GamesListing = (props: GamesListingProps) => {
@@ -12,15 +12,13 @@ const GamesListing = (props: GamesListingProps) => {
 	let gameIndex = 0;
 	return (
 		<div className="games-listing">
-			{
-				games.map(g => (
-					<>
-						<Listing game={g} index={gameIndex++}/>
-					</>
-				))
-			}
+			{games.map((g) => (
+				<>
+					<Listing game={g} index={gameIndex++} />
+				</>
+			))}
 		</div>
 	);
-}
+};
 
 export default GamesListing;

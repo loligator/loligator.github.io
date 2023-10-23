@@ -11,4 +11,4 @@ it('renders without crashing', () => {
 
 it('Does a thing', () => {
 	assert(1 + 1 === 2);
-})
+});

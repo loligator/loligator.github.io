@@ -6,7 +6,7 @@ export const Contact: React.FC = () => {
 	return (
 		<>
 			<CmcdNavBar />
-			<CmcdFooter fullscreen={true}/>
+			<CmcdFooter fullscreen={true} />
 		</>
-	)
-}
+	);
+};

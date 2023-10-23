@@ -24,6 +24,7 @@
 		"three-addons": "^1.2.0"
 	},
 	"devDependencies": {
+		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@types/jest": "^29.5.0",
 		"@types/matter-js": "^0.18.2",
 		"@types/node": "^18.15.11",
