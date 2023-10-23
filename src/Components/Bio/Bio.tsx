@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import style from './Bio.module.scss'
+import style from './Bio.module.scss';
 
 export const Bio: React.FC = () => {
 	return (
@@ -9,20 +9,29 @@ export const Bio: React.FC = () => {
 				<h2>Hi! My name is Connor McDermott</h2>
 				<h3>I'm a Software Engineer!</h3>
 				<p>
-					Since graduating from Michigan State University (Go Green!) in 2017,
-					I've been working in several different types of environments, with
-					different ways of working, all focused on software!
+					Welcome to my portfolio! I'm a passionate software engineer with a
+					versatile skill set in frontend development, backend systems, and even
+					the captivating world of game development. My journey began at
+					Michigan State University, where I earned a degree in Computer Science
+					in 2017, laying the foundation for an exciting career in the tech
+					industry.
 				</p>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quisquam
-					expedita! Soluta, sequi. Excepturi labore veritatis consequatur modi
-					corrupti iure explicabo minus in qui ipsum, tempore aliquid cum a
-					distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Officiis laudantium, ullam ratione molestias iure, necessitatibus
-					deleniti, porro hic pariatur odit autem provident impedit expedita
-					repellendus illum officia? Unde, eum! Quae.
+					With experiences at renowned tech giants like Amazon AWS, where I
+					honed my problem-solving abilities and industry expertise, and
+					consulting engagements with Meta and Mastercard, I've cultivated a
+					deep understanding of cutting-edge technologies and a knack for
+					building robust and scalable software solutions. Currently, I'm proud
+					to be a part of the innovative team at Walgreens Boots Alliance, where
+					I continue to develop high quality frontend elements and rock-solid
+					backend APIs. Whether it's crafting engaging user interfaces,
+					architecting robust backend systems, or crafting immersive gaming
+					experiences, I'm committed to delivering high-quality solutions that
+					not only meet but exceed expectations. Explore my portfolio to see
+					some of my recent projects and discover how I can help bring your
+					digital vision to life. Let's create something incredible together!
 				</p>
 			</div>
 		</div>
-	)
-}
+	);
+};
