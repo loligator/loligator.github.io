@@ -2,11 +2,11 @@
 	"name": "connormcdermott",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://connormcdermott.me",
+	"homepage": "connormcdermott.me/",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "npm run format:write && react-scripts build",
-		"deploy": "gh-pages -d build",
+		"deploy": "npm run build && gh-pages -d build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"format:check": "prettier . --check",
