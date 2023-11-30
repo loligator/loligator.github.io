@@ -1,0 +1,12 @@
+.twoColumnContainer {
+	display: flex;
+	flex-direction: row;
+
+	& :first-child {
+		flex-grow: 3;
+	}
+
+	& :nth-child(1) {
+		flex-grow: 1;
+	}
+}

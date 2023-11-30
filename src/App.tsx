@@ -7,6 +7,7 @@ import styles from './App.module.scss';
 import { Contact } from './Components/Pages/Contact/contact';
 import { Home } from './Components/Pages/Home/Home';
 import { Resume } from './Components/Pages/Resume/Resume';
+import { Blog } from './Components/Pages/Blog/Blog';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 					<Route path="/" Component={Home}></Route>
 					<Route path="/resume" Component={Resume}></Route>
 					<Route path="/contact" Component={Contact}></Route>
+					<Route path="/blog" Component={Blog}></Route>
 				</Routes>
 			</BrowserRouter>
 		</div>
