@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './TwoColumns.module.scss';
+import styles from './TwoColumn.module.scss';
 
 interface TwoColumnProps {
 	children: React.ReactNode[];
